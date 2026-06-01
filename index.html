@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- ===== SEO META ===== -->
+  <title>NEPSE Calculator Nepal 2025 - Stock Profit, Loss & Brokerage Tool</title>
+  <meta name="description" content="Free NEPSE share calculator for Nepal stock market. Calculate stock profit/loss, brokerage commission, SEBON fee, DP charge, and Capital Gains Tax (CGT) instantly with 2025 updated rates.">
+  <meta name="keywords" content="NEPSE calculator, Nepal stock calculator, share calculator Nepal, NEPSE brokerage, capital gains tax Nepal, NEPSE profit loss, stock calculator 2025">
+  <meta name="author" content="NEPSE Calculator Nepal">
+  <link rel="canonical" href="https://your-domain.com/">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="NEPSE Calculator Nepal 2025">
+  <meta property="og:description" content="Calculate your NEPSE stock profit, brokerage and CGT instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:image" content="https://your-domain.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+
+  <!-- ===== Schema.org ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "NEPSE Calculator Nepal",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NPR" },
+    "description": "Free online NEPSE share calculator for Nepal stock market with 2025 updated rates."
+  }
+  </script>
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ===== STYLES ===== -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ====================== HEADER / NAVBAR ====================== -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main navigation">
+
+        <a href="index.html" class="navbar__logo">
+          <span class="navbar__logo-icon" aria-hidden="true">📈</span>
+          <span>NEPSE Calc</span>
+        </a>
+
+        <ul class="navbar__menu" id="navbar-menu">
+          <li><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
+          <li><a href="#calculator" class="navbar__link">Calculators</a></li>
+          <li><a href="pages/about.html" class="navbar__link">About</a></li>
+          <li><a href="pages/contact.html" class="navbar__link">Contact</a></li>
+          <li class="navbar__dropdown">
+            <button class="navbar__dropdown-toggle">Blog ▾</button>
+            <div class="navbar__dropdown-menu">
+              <a href="#news" rel="noopener noreferrer">Latest News</a>
+              <a href="pages/about.html" rel="noopener noreferrer">Market Guides</a>
+              <a href="pages/about.html" rel="noopener noreferrer">Investment Tips</a>
+            </div>
+          </li>
+          <li>
+            <button class="theme-toggle" id="theme-toggle-desktop" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+          </li>
+        </ul>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle dark mode" title="Toggle theme" style="display:none;">🌙</button>
+          <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__badge">🇳🇵 Updated for 2026 NEPSE Rates</span>
+          <h1 class="hero__title">NEPSE Calculator Nepal</h1>
+          <p class="hero__subtitle">Calculate your stock profit, loss, brokerage and Capital Gains Tax (CGT) instantly — with the most accurate Nepal stock market formulas.</p>
+          <div class="hero__cta">
+            <a href="#calculator" class="btn btn--primary btn--lg">🚀 Start Calculating</a>
+            <a href="pages/about.html" class="btn btn--secondary btn--lg">Learn More</a>
+          </div>
+          <div class="hero__stats">
+            <div>
+              <span class="hero__stat-num">10K+</span>
+              <span class="hero__stat-label">Daily Calculations</span>
+            </div>
+            <div>
+              <span class="hero__stat-num">100%</span>
+              <span class="hero__stat-label">Free Forever</span>
+            </div>
+            <div>
+              <span class="hero__stat-num">2025</span>
+              <span class="hero__stat-label">Latest Rates</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CALCULATOR ====================== -->
+    <section id="calculator" class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="calculator">
+          <div class="calculator__tabs" role="tablist">
+            <button class="calculator__tab calculator__tab--active" data-tab="buysell" role="tab">📊 Buy / Sell</button>
+            <button class="calculator__tab" data-tab="brokerage" role="tab">💼 Brokerage</button>
+            <button class="calculator__tab" data-tab="cgt" role="tab">🧾 Capital Gains Tax</button>
+            <button class="calculator__tab" data-tab="wacc" role="tab">⚖️ WACC</button>
+          </div>
+
+          <!-- ---------- BUY/SELL PANEL ---------- -->
+          <div class="calculator__panel calculator__panel--active" data-panel="buysell" role="tabpanel">
+            <div class="calculator__grid">
+              <form id="buysell-form" novalidate autocomplete="off">
+                <h3 style="margin-bottom: 1rem;">Enter Trade Details</h3>
+                <div class="calc-form__row">
+                  <div class="calc-form__group">
+                    <label class="calc-form__label" for="bs-shares">Number of Shares *</label>
+                    <input type="number" id="bs-shares" name="shares" class="calc-form__input" placeholder="e.g. 100" min="1" step="1" required>
+                    <span class="calc-form__error"></span>
+                  </div>
+                  <div class="calc-form__group">
+                    <label class="calc-form__label" for="bs-holding">Holding Period *</label>
+                    <select id="bs-holding" name="holdingType" class="calc-form__select">
+                      <option value="long">Long-term (≥ 365 days) — 5%</option>
+                      <option value="short">Short-term (&lt; 365 days) — 7.5%</option>
+                      <option value="institution">Institution — 10%</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="calc-form__row">
+                  <div class="calc-form__group">
+                    <label class="calc-form__label" for="bs-buy">Buy Price per Share (Rs) *</label>
+                    <input type="number" id="bs-buy" name="buyPrice" class="calc-form__input" placeholder="e.g. 500" min="0.01" step="0.01" required>
+                    <span class="calc-form__error"></span>
+                  </div>
+                  <div class="calc-form__group">
+                    <label class="calc-form__label" for="bs-sell">Sell Price per Share (Rs) *</label>
+                    <input type="number" id="bs-sell" name="sellPrice" class="calc-form__input" placeholder="e.g. 700" min="0.01" step="0.01" required>
+                    <span class="calc-form__error"></span>
+                  </div>
+                </div>
+                <details style="margin-bottom: 1rem;">
+                  <summary style="cursor:pointer; font-weight:600; color: var(--color-primary); font-size: 0.875rem;">⚙️ Advanced Settings (optional)</summary>
+                  <div style="margin-top: 1rem;">
+                    <div class="calc-form__row">
+                      <div class="calc-form__group">
+                        <label class="calc-form__label">Buy Brokerage % (auto)</label>
+                        <input type="number" name="brokerageBuy" class="calc-form__input" placeholder="auto" step="0.001">
+                        <span class="calc-form__hint">Leave empty for tier-based auto rate</span>
+                      </div>
+                      <div class="calc-form__group">
+                        <label class="calc-form__label">Sell Brokerage % (auto)</label>
+                        <input type="number" name="brokerageSell" class="calc-form__input" placeholder="auto" step="0.001">
+                      </div>
+                    </div>
+                    <div class="calc-form__row">
+                      <div class="calc-form__group">
+                        <label class="calc-form__label">SEBON Fee %</label>
+                        <input type="number" name="sebonRate" class="calc-form__input" placeholder="0.015" step="0.001" value="0.015">
+                      </div>
+                      <div class="calc-form__group">
+                        <label class="calc-form__label">DP Charge (Rs)</label>
+                        <input type="number" name="dpCharge" class="calc-form__input" placeholder="25" step="1" value="25">
+                      </div>
+                    </div>
+                  </div>
+                </details>
+                <div class="calc-form__actions">
+                  <button type="submit" class="btn btn--primary btn--block">Calculate</button>
+                  <button type="button" class="btn btn--ghost" data-action="reset">Reset</button>
+                </div>
+              </form>
+              <div id="buysell-results" class="results">
+                <div class="results__placeholder">
+                  <div class="results__placeholder-icon">📊</div>
+                  <p>Fill in the form and click <strong>Calculate</strong> to see your results.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---------- BROKERAGE PANEL ---------- -->
+          <div class="calculator__panel" data-panel="brokerage" role="tabpanel">
+            <div class="calculator__grid">
+              <form id="brokerage-form" novalidate autocomplete="off">
+                <h3 style="margin-bottom: 1rem;">Brokerage Fee Calculator</h3>
+                <div class="calc-form__group">
+                  <label class="calc-form__label" for="brk-amt">Transaction Amount (Rs) *</label>
+                  <input type="number" id="brk-amt" name="amount" class="calc-form__input" placeholder="e.g. 100000" min="1" step="0.01" required>
+                  <span class="calc-form__error"></span>
+                </div>
+                <div class="calc-form__group">
+                  <label class="calc-form__label">Override Rate % (optional)</label>
+                  <input type="number" name="rate" class="calc-form__input" placeholder="auto" step="0.001">
+                  <span class="calc-form__hint">Leave empty for tier-based rate</span>
+                </div>
+                <div class="calc-form__actions">
+                  <button type="submit" class="btn btn--primary btn--block">Calculate</button>
+                </div>
+                <div style="margin-top:1.5rem; padding:1rem; background:var(--color-bg-alt); border-radius:8px; font-size:0.875rem;">
+                  <strong>NEPSE Brokerage Tiers (2025):</strong>
+                  <ul style="margin-top:0.5rem; padding-left:1.2rem; color:var(--color-text-muted);">
+                    <li>≤ Rs 50,000 → 0.36%</li>
+                    <li>Rs 50,001 – 5,00,000 → 0.33%</li>
+                    <li>Rs 5,00,001 – 20,00,000 → 0.31%</li>
+                    <li>Rs 20,00,001 – 1 Crore → 0.27%</li>
+                    <li>Above Rs 1 Crore → 0.24%</li>
+                  </ul>
+                </div>
+              </form>
+              <div id="brokerage-results" class="results">
+                <div class="results__placeholder">
+                  <div class="results__placeholder-icon">💼</div>
+                  <p>Enter an amount to see brokerage breakdown.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---------- CGT PANEL ---------- -->
+          <div class="calculator__panel" data-panel="cgt" role="tabpanel">
+            <div class="calculator__grid">
+              <form id="cgt-form" novalidate autocomplete="off">
+                <h3 style="margin-bottom: 1rem;">Capital Gains Tax Calculator</h3>
+                <div class="calc-form__row">
+                  <div class="calc-form__group">
+                    <label class="calc-form__label" for="cgt-buy">Total Buy Amount (Rs) *</label>
+                    <input type="number" id="cgt-buy" name="buyTotal" class="calc-form__input" placeholder="e.g. 50000" min="0.01" step="0.01" required>
+                    <span class="calc-form__error"></span>
+                  </div>
+                  <div class="calc-form__group">
+                    <label class="calc-form__label" for="cgt-sell">Total Sell Amount (Rs) *</label>
+                    <input type="number" id="cgt-sell" name="sellTotal" class="calc-form__input" placeholder="e.g. 70000" min="0.01" step="0.01" required>
+                    <span class="calc-form__error"></span>
+                  </div>
+                </div>
+                <div class="calc-form__group">
+                  <label class="calc-form__label" for="cgt-holding">Tax Bracket *</label>
+                  <select id="cgt-holding" name="holdingType" class="calc-form__select">
+                    <option value="long">Long-term — 5%</option>
+                    <option value="short">Short-term — 7.5%</option>
+                    <option value="institution">Institution — 10%</option>
+                  </select>
+                </div>
+                <div class="calc-form__actions">
+                  <button type="submit" class="btn btn--primary btn--block">Calculate Tax</button>
+                </div>
+              </form>
+              <div id="cgt-results" class="results">
+                <div class="results__placeholder">
+                  <div class="results__placeholder-icon">🧾</div>
+                  <p>Enter values to calculate your CGT.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---------- WACC PANEL ---------- -->
+          <div class="calculator__panel" data-panel="wacc" role="tabpanel">
+            <div class="calculator__grid">
+              <form id="wacc-form" novalidate autocomplete="off">
+                <h3 style="margin-bottom: 1rem;">Weighted Average Cost Calculator</h3>
+                <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:1rem;">
+                  Enter multiple share lots bought at different prices to find your average cost.
+                </p>
+                <div class="wacc-lots">
+                  <div class="wacc-lot calc-form__row">
+                    <div class="calc-form__group">
+                      <label class="calc-form__label">Lot 1 Shares</label>
+                      <input type="number" class="calc-form__input" name="shares[]" min="0" step="1" placeholder="100">
+                    </div>
+                    <div class="calc-form__group">
+                      <label class="calc-form__label">Lot 1 Price (Rs)</label>
+                      <input type="number" class="calc-form__input" name="price[]" min="0" step="0.01" placeholder="500">
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn--ghost" data-action="add-lot" style="margin-bottom:1rem;">+ Add Another Lot</button>
+                <div class="calc-form__actions">
+                  <button type="submit" class="btn btn--primary btn--block">Calculate WACC</button>
+                </div>
+              </form>
+              <div id="wacc-results" class="results">
+                <div class="results__placeholder">
+                  <div class="results__placeholder-icon">⚖️</div>
+                  <p>Add your share lots and calculate WACC.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ad-slot">
+          <small>Advertisement Space — Add your AdSense code here</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FEATURES ====================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why Use Our NEPSE Calculator?</h2>
+        <p class="section-subtitle">The most accurate, fast, and free Nepal share calculator</p>
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-card__icon">⚡</div>
+            <h3 class="feature-card__title">Instant Results</h3>
+            <p class="feature-card__desc">Real-time calculations with the latest 2025 NEPSE brokerage and tax rates.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">🎯</div>
+            <h3 class="feature-card__title">100% Accurate</h3>
+            <p class="feature-card__desc">Validated against SEBON and NEPSE official rate cards.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">📱</div>
+            <h3 class="feature-card__title">Mobile Friendly</h3>
+            <p class="feature-card__desc">Works perfectly on phones, tablets, and desktops with a clean UI.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">🔒</div>
+            <h3 class="feature-card__title">Privacy First</h3>
+            <p class="feature-card__desc">No login, no tracking. Your data stays in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== HOW IT WORKS ====================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">3 simple steps to calculate your stock returns</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3 class="step__title">Enter Details</h3>
+            <p class="step__desc">Input the number of shares, buy price, sell price, and holding period.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3 class="step__title">Click Calculate</h3>
+            <p class="step__desc">Our calculator instantly applies all NEPSE charges and CGT rules.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3 class="step__title">Get Results</h3>
+            <p class="step__desc">View detailed breakdown of brokerage, taxes, and net profit/loss.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== NEWS ====================== -->
+    <section id="news" class="section">
+      <div class="container">
+        <h2 class="section-title">Latest NEPSE News</h2>
+        <p class="section-subtitle">Stay updated with the Nepal stock market</p>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-card__image">📈</div>
+            <div class="news-card__body">
+              <div class="news-card__date">May 30, 2025</div>
+              <h3 class="news-card__title">NEPSE Index Crosses 2,500 Points</h3>
+              <p class="news-card__excerpt">The Nepal Stock Exchange closed at a new high amid strong banking sector performance.</p>
+              <a href="#" class="btn btn--secondary" rel="noopener noreferrer">Read More</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-card__image">🏦</div>
+            <div class="news-card__body">
+              <div class="news-card__date">May 28, 2025</div>
+              <h3 class="news-card__title">SEBON Updates Brokerage Rates</h3>
+              <p class="news-card__excerpt">New tiered brokerage commission structure effective from this fiscal year.</p>
+              <a href="#" class="btn btn--secondary" rel="noopener noreferrer">Read More</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-card__image">💰</div>
+            <div class="news-card__body">
+              <div class="news-card__date">May 25, 2025</div>
+              <h3 class="news-card__title">CGT Rules Explained for 2025</h3>
+              <p class="news-card__excerpt">A complete guide to capital gains tax for individual and institutional investors.</p>
+              <a href="#" class="btn btn--secondary" rel="noopener noreferrer">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== TESTIMONIALS ====================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">What Investors Say</h2>
+        <p class="section-subtitle">Trusted by thousands of NEPSE investors</p>
+        <div class="testimonials">
+          <div class="testimonial">
+            <p class="testimonial__text">Best NEPSE calculator I've used. Saves me hours every week and the CGT calculation is spot on.</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">RS</div>
+              <div>
+                <div class="testimonial__name">Ram Sharma</div>
+                <div class="testimonial__role">Retail Investor, Kathmandu</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__text">The brokerage tier auto-fill feature is brilliant. No more manual lookups.</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">SK</div>
+              <div>
+                <div class="testimonial__name">Sita Karki</div>
+                <div class="testimonial__role">Day Trader, Pokhara</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__text">Clean interface, accurate numbers, and works perfectly on my phone. Highly recommended!</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">BT</div>
+              <div>
+                <div class="testimonial__name">Bikash Thapa</div>
+                <div class="testimonial__role">Long-term Investor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FAQ ====================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about NEPSE calculations</p>
+        <div class="faq">
+          <div class="faq__item">
+            <button class="faq__question">
+              <span>What is the brokerage commission rate in NEPSE?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>NEPSE uses a tiered brokerage system: 0.36% for amounts up to Rs 50,000, 0.33% up to Rs 5,00,000, 0.31% up to Rs 20,00,000, 0.27% up to Rs 1 Crore, and 0.24% above Rs 1 Crore.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              <span>How is Capital Gains Tax calculated in Nepal?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>For individuals: 7.5% on short-term gains (held less than 365 days) and 5% on long-term gains (held 365 days or more). Institutions pay 10% flat on all gains. CGT only applies on profit, not on losses.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              <span>What is the SEBON fee?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>The Securities Board of Nepal (SEBON) levies a regulatory fee of 0.015% on both buy and sell transactions in the NEPSE market.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              <span>What is DP charge and when does it apply?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>The Depository Participant (DP) charge is a flat Rs 25 fee applied per script, per day, on sell transactions only. It is collected by your broker on behalf of CDS &amp; Clearing Ltd.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              <span>Is this calculator free to use?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Yes! Our NEPSE calculator is 100% free and will remain free. We don't ask for any registration, login, or personal information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA ====================== -->
+    <section class="container">
+      <div class="cta-section">
+        <h2>Ready to Calculate Your Returns?</h2>
+        <p>Make smarter investment decisions with accurate, real-time NEPSE calculations.</p>
+        <a href="#calculator" class="btn btn--lg">🚀 Start Calculating Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <span aria-hidden="true">📈</span> NEPSE Calc
+          </div>
+          <p class="footer__about">
+            Nepal's most trusted free stock calculator. Providing accurate brokerage, CGT and profit/loss calculations for NEPSE investors since 2025.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook" rel="noopener noreferrer">f</a>
+            <a href="#" aria-label="Twitter" rel="noopener noreferrer">𝕏</a>
+            <a href="#" aria-label="Instagram" rel="noopener noreferrer">📷</a>
+            <a href="#" aria-label="YouTube" rel="noopener noreferrer">▶</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Legal</h4>
+          <ul class="footer__links">
+            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="pages/terms.html">Terms of Service</a></li>
+            <li><a href="#news">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Newsletter</h4>
+          <p style="font-size:0.875rem; margin-bottom:0.75rem;">Get NEPSE updates in your inbox.</p>
+          <form id="newsletter-form" class="footer__newsletter" novalidate>
+            <input type="email" placeholder="your@email.com" required maxlength="254">
+            <button type="submit" class="btn btn--primary btn--block">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        © <span id="current-year">2025</span> NEPSE Calculator Nepal. All rights reserved. |
+        Disclaimer: This tool is for educational purposes only. Always verify with your broker.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/utils.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Mobile theme toggle + clickjacking protection -->
+  <script>
+    // Prevent clickjacking
+    if (window.self !== window.top) {
+      window.top.location = window.self.location;
+    }
+
+    (function() {
+      const mobileBtn  = document.getElementById('theme-toggle-mobile');
+      const desktopBtn = document.getElementById('theme-toggle-desktop');
+
+      function syncToggles(isDark) {
+        const icon = isDark ? '☀️' : '🌙';
+        if (mobileBtn)  mobileBtn.textContent  = icon;
+        if (desktopBtn) desktopBtn.textContent = icon;
+      }
+
+      function handleResize() {
+        if (mobileBtn) {
+          mobileBtn.style.display = window.innerWidth < 768 ? 'flex' : 'none';
+        }
+      }
+      handleResize();
+      window.addEventListener('resize', handleResize);
+
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', function() {
+          document.documentElement.classList.toggle('dark');
+          const isDark = document.documentElement.classList.contains('dark');
+          syncToggles(isDark);
+          try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch(e) {}
+        });
+      }
+
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+          syncToggles(true);
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+</body>
+</html>

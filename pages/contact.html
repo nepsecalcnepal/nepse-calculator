@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | NEPSE Calculator Nepal</title>
+  <meta name="description" content="Get in touch with NEPSE Calculator Nepal — questions, feedback, partnerships welcome.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="../index.html" class="navbar__logo">
+          <span class="navbar__logo-icon">📈</span><span>NEPSE Calc</span>
+        </a>
+        <ul class="navbar__menu" id="navbar-menu">
+          <li><a href="../index.html" class="navbar__link">Home</a></li>
+          <li><a href="../index.html#calculator" class="navbar__link">Calculators</a></li>
+          <li><a href="about.html" class="navbar__link">About</a></li>
+          <li><a href="contact.html" class="navbar__link navbar__link--active">Contact</a></li>
+          <li><button class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+        </ul>
+        <button class="navbar__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you</p>
+      <div class="breadcrumb"><a href="../index.html">Home</a> / Contact</div>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact form -->
+        <div class="contact-info">
+          <h2 style="margin-bottom: 1rem;">Send us a message</h2>
+          <div id="contact-alert" class="alert"></div>
+          <form id="contact-form" novalidate>
+            <div class="calc-form__group">
+              <label class="calc-form__label" for="c-name">Your Name *</label>
+              <input type="text" id="c-name" name="name" class="calc-form__input" required minlength="2">
+            </div>
+            <div class="calc-form__group">
+              <label class="calc-form__label" for="c-email">Email Address *</label>
+              <input type="email" id="c-email" name="email" class="calc-form__input" required>
+            </div>
+            <div class="calc-form__group">
+              <label class="calc-form__label" for="c-subject">Subject *</label>
+              <input type="text" id="c-subject" name="subject" class="calc-form__input" required>
+            </div>
+            <div class="calc-form__group">
+              <label class="calc-form__label" for="c-msg">Message *</label>
+              <textarea id="c-msg" name="message" class="calc-form__input" rows="5" required minlength="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact info -->
+        <div>
+          <div class="contact-info">
+            <h2 style="margin-bottom: 1.5rem;">Reach us directly</h2>
+            <div class="contact-item">
+              <div class="contact-item__icon">📧</div>
+              <div>
+                <div class="contact-item__title">Email</div>
+                <a href="mailto:nepsecalcnepal@gmail.com" class="contact-item__value">nepsecalcnepal@gmail.com</a>
+              </div>
+            </div>
+            <!--<div class="contact-item">
+              <div class="contact-item__icon">📞</div>
+              <div>
+                <div class="contact-item__title">Phone</div>
+                <div class="contact-item__value">+977-1-XXXXXXX</div>
+              </div>
+            </div>-->
+            <div class="contact-item">
+              <div class="contact-item__icon">📍</div>
+              <div>
+                <div class="contact-item__title">Address</div>
+                <div class="contact-item__value">Kathmandu, Nepal</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon">⏰</div>
+              <div>
+                <div class="contact-item__title">Working Hours</div>
+                <div class="contact-item__value">Available via email anytime</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14129.301894047!2d85.32395754999999!3d27.7090319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu!5e0!3m2!1sen!2snp!4v1700000000000"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Office location map"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        © <span id="current-year">2025</span> NEPSE Calculator Nepal. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/utils.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

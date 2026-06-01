@@ -1,0 +1,83 @@
+/* ==========================================================================
+   CSS VARIABLES
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #1a56db;
+  --color-primary-dark: #1341b0;
+  --color-primary-light: #3b7df8;
+  --color-primary-50: #eff4ff;
+
+  --color-accent: #0ea5e9;
+  --color-accent-light: #e0f2fe;
+
+  --color-profit: #059669;
+  --color-profit-light: #d1fae5;
+  --color-loss: #dc2626;
+  --color-loss-light: #fee2e2;
+  --color-warning: #d97706;
+  --color-info: #0ea5e9;
+
+  --color-white: #f7f5f2;
+--color-bg: #f2efe9;
+--color-bg-alt: #e9e5de;
+--color-border: #cfc9bc;
+  --color-text: #111827;
+  --color-text-muted: #4b5563;
+  --color-text-light: #9ca3af;
+
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(17,24,39,0.06), 0 1px 2px rgba(17,24,39,0.04);
+  --shadow-md: 0 4px 12px rgba(17,24,39,0.08), 0 2px 6px rgba(17,24,39,0.04);
+  --shadow-lg: 0 10px 30px rgba(17,24,39,0.1), 0 4px 10px rgba(17,24,39,0.05);
+  --shadow-xl: 0 20px 50px rgba(17,24,39,0.12);
+  --shadow-blue: 0 8px 24px rgba(26,86,219,0.2);
+
+  --transition-fast: 0.15s cubic-bezier(0.4,0,0.2,1);
+  --transition-base: 0.25s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.4s cubic-bezier(0.4,0,0.2,1);
+
+  --container-max: 1200px;
+  --header-height: 70px;
+}
+
+html.dark {
+  --color-white: #111827;
+  --color-bg: #0f172a;
+  --color-bg-alt: #1e293b;
+  --color-border: #334155;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-text-light: #475569;
+  --color-primary-50: #1e293b;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.35);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.4);
+  --shadow-xl: 0 20px 50px rgba(0,0,0,0.5);
+}
